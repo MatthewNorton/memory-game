@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App pt-5  max-w-7xl mx-auto my-0">
       <h1 className="text-center text-4xl font-medium leading-2 text-gray-900">
-        Memory Game Built with{" "}
+        Memory Game Built with
         <img className="headline-icons" src={reactIcon} />
         <img className="headline-icons" src={typescriptIcon} />
         <img className="headline-icons" src={tailwindIcon} />
@@ -20,7 +20,7 @@ function App() {
       </div>
       <div className="block max-w-6xl  px-12 py-10">
         <p className="">
-          Icons created by{" "}
+          Icons created by
           <a href="https://illlustrations.co" target="_blank">
             vijay verma
           </a>
