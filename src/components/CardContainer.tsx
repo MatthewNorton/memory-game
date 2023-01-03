@@ -1,8 +1,6 @@
 import React from "react";
 import Card from "./Card";
 import { ICardContainerComponent} from "../interfaces/Interfaces";
-
-
 export default function CardContainer({
 	cards,
 	flippedCards,
