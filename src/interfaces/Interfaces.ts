@@ -1,27 +1,23 @@
 export interface ICards {
-	cards: ICard[];
-};
+  cards: ICard[];
+}
 
 export interface ICard {
-	cardId: string;
-	imageUrl: string;
-};
+  cardId: string;
+  imageUrl: string;
+}
 
 export interface ICardContainerComponent extends ICards {
-
-	flippedCards: number[];
-	matchedCardIds: string[];
-	onClick: (index: number) => void;
-	disabled: boolean;
-};
+  flippedCards: number[];
+  matchedCardIds: string[];
+  onClick: (index: number) => void;
+  disabled: boolean;
+}
 
 export interface ICardComponent {
-    card: ICard;
-    onClick: () => void;
-    flipped: boolean;
-    matched: boolean;
-    disabled: boolean;
-  };
-
-
-
+  card: ICard;
+  onClick: () => void;
+  flipped: boolean;
+  matched: boolean;
+  disabled: boolean;
+}
