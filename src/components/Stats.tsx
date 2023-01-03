@@ -1,14 +1,9 @@
-interface Stats {
-  numberOfGuesses: number;
-  totalPairs: number;
-  totalCorrect: number;
-}
-
+import { IStats } from "../interfaces/Interfaces";
 export default function Stats({
   totalPairs,
   totalCorrect,
   numberOfGuesses,
-}: Stats) {
+}: IStats) {
   return (
     <div>
       <dl className="mt-5 mx-5 grid grid-cols-1 gap-5 sm:grid-cols-2  my-10">

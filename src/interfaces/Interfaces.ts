@@ -21,3 +21,9 @@ export interface ICardComponent {
   matched: boolean;
   disabled: boolean;
 }
+
+export interface IStats {
+  numberOfGuesses: number;
+  totalPairs: number;
+  totalCorrect: number;
+}
