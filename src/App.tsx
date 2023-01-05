@@ -7,13 +7,16 @@ import tailwindIcon from "./assets/tailwindIcon.svg";
 
 function App() {
   const shuffledCards = shuffle(CardData);
+  const codeIcons = [reactIcon, typescriptIcon, tailwindIcon];
   return (
     <div className="App pt-5  max-w-7xl mx-auto my-0">
-      <h1 className="text-center text-4xl font-medium leading-2 text-gray-900">
+      <h1 className="mt-1 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
         Memory Game Built with
-        <img className="headline-icons" src={reactIcon} />
-        <img className="headline-icons" src={typescriptIcon} />
-        <img className="headline-icons" src={tailwindIcon} />
+        <>
+        {codeIcons.map((icon, key) => {
+          return <img key={key} className="headline-icons" src={icon} />
+        })}
+        </>
       </h1>
       <div className="mx-auto px-4 text-center sm:px-6 lg:px-8">
         <MemoryGame cards={shuffledCards} />
