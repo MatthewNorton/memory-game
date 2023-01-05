@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ICards } from "../interfaces/Interfaces";
 import CardGrid from "../components/CardContainer";
 import Stats from "../components/Stats";
+import CompletedGame from "../components/CompletedGame";
 
 type State = {
   guesses: number;
@@ -43,7 +44,7 @@ export default function MemoryGame({ cards }: ICards) {
             disabled: false,
           }));
         }
-      }, 1000);
+      }, 500);
     }
     if (state.matchedCardIds.length === totalPairs) {
       setState({ ...state, gameOver: true });
@@ -72,7 +73,9 @@ export default function MemoryGame({ cards }: ICards) {
         totalCorrect={state.matchedCardIds.length}
       />
       {state.gameOver ? (
-        <div className="text-4xl my-12">Game Completed, Congratulations!</div>
+        <CompletedGame
+          guesses={state.guesses}
+        />
       ) : (
         <CardGrid
           cards={cards}
