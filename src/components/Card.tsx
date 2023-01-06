@@ -1,4 +1,4 @@
-import { ICardComponent } from "../interfaces/Interfaces";
+import { ICardComponent } from "../Types/Types";
 
 export default function Card({
   card,
@@ -10,7 +10,16 @@ export default function Card({
   return (
     <button
       type="button"
-      className={`card ${flipped || matched ? "flipped shadow-2xl" : ""}`}
+      className={
+        `card ${
+          flipped ?
+          "flipped" : ""
+        }
+        ${
+          matched ?
+          "flipped grayscale matched cursor-none" : ""
+        }
+      `}
       onClick={onClick}
       disabled={disabled}
     >

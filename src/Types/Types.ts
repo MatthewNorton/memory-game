@@ -27,3 +27,18 @@ export interface IStats {
   totalPairs: number;
   totalCorrect: number;
 }
+export type HeaderProps= {
+  logo: string;
+  title: string;
+};
+export type IconProps = {
+  [key: string]: string;
+}
+
+export type State = {
+  guesses: number;
+  flippedCards: number[];
+  matchedCardIds: string[];
+  disabled: boolean;
+  gameOver: boolean;
+};

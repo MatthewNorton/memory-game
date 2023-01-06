@@ -1,18 +1,12 @@
 import { useState, useEffect } from "react";
-import { ICards } from "../interfaces/Interfaces";
-import CardGrid from "../components/CardContainer";
-import Stats from "../components/Stats";
-import CompletedGame from "../components/CompletedGame";
+import { ICards, State } from "../Types/Types";
 
-type State = {
-  guesses: number;
-  flippedCards: number[];
-  matchedCardIds: string[];
-  disabled: boolean;
-  gameOver: boolean;
-};
+import CardGrid from "./Cards";
+import Stats from "./Stats";
+import CompletedGame from "./Finished";
 
-export default function MemoryGame({ cards }: ICards) {
+
+export default function Game({ cards }: ICards) {
   const [state, setState] = useState<State>({
     guesses: 0,
     flippedCards: [],
@@ -23,8 +17,10 @@ export default function MemoryGame({ cards }: ICards) {
   const totalPairs = cards.length / 2;
 
   useEffect(() => {
+
     if (state.flippedCards.length === 2) {
       setState({ ...state, disabled: true });
+
       setTimeout(() => {
         const [index1, index2] = state.flippedCards;
         const card1 = cards[index1];
@@ -35,6 +31,8 @@ export default function MemoryGame({ cards }: ICards) {
             matchedCardIds: [...prevState.matchedCardIds, card1.cardId],
             flippedCards: [],
             disabled: false,
+
+
           }));
         } else {
           setState((prevState) => ({
@@ -66,12 +64,8 @@ export default function MemoryGame({ cards }: ICards) {
   };
 
   return (
-    <div className="memory-game">
-      <Stats
-        numberOfGuesses={state.guesses}
-        totalPairs={totalPairs}
-        totalCorrect={state.matchedCardIds.length}
-      />
+    <div className="mx-auto px-4 text-center sm:px-6 lg:px-8">
+
       {state.gameOver ? (
         <CompletedGame
           guesses={state.guesses}
@@ -85,6 +79,11 @@ export default function MemoryGame({ cards }: ICards) {
           disabled={state.disabled}
         />
       )}
+            <Stats
+        numberOfGuesses={state.guesses}
+        totalPairs={totalPairs}
+        totalCorrect={state.matchedCardIds.length}
+      />
     </div>
   );
 }

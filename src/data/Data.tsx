@@ -1,5 +1,5 @@
 import Card from "../components/Card";
-import { ICard } from "../interfaces/Interfaces";
+import { ICard } from "../Types/Types";
 
 
 const imgsrc = "cards/";
