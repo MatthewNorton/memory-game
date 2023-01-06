@@ -1,20 +1,28 @@
-# Memory Game created using React, Typescript, TailwindCSS and using Vite.
+# Memory Game
+🖥️ [Memory Game Demo](https://memory-game-six-rouge.vercel.app/)
 
-A Just For Fun memory game while learning new techniques along the way.
 
-## Getting Started
+Created with
+<img height="16" width="16" src="https://cdn.simpleicons.org/React" />
+<img height="16" width="16" src="https://cdn.simpleicons.org/Typescript" />
+<img height="16" width="16" src="https://cdn.simpleicons.org/TailwindCSS" />
+<img height="16" width="16" src="https://cdn.simpleicons.org/Vite" />
+
+
+
+A Just For Fun memory game
+
+
+### Getting Started
 ```
 npm install
-```
-```
 npm run dev
 ```
 
 
 
-
-
-In Progress:
+---
+*Work in progress*
 - [X] Code cleanup Pass 1
 - [X] Breakout components Pass 1
 - [X] Add a score
@@ -22,12 +30,14 @@ In Progress:
 - [ ] Add a timer
 - [ ] Add a diffulty level
 - [ ] Add categories
-- [ ] Add a leaderboard
-
-
-For Kicks and Giggles:
 - [ ] Add Object.entries utility (Icons)
-- [ ] Try to simplify tailwind
+- [ ] add custom classes to tailwind
 - [ ] Automate tailwind?
+- [ ] - [ ] Add a leaderboard
+	- [ ] Firebase backend
+ - [ ] Complete
+
+
+
 
 
