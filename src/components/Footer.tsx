@@ -1,7 +1,9 @@
+import ResetButton from "./ResetButton";
 
 export default function Footer() {
   return(
-    <div className="block max-w-6xl px-12 py-10">
+    <div className="block max-w-6xl px-12">
+        <div className="mb-3"><ResetButton/></div>
         <div>
           <p>
             Icons created by <a href="https://illlustrations.co" target="_blank"> Vijay Verma </a>

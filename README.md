@@ -1,6 +1,7 @@
 # Memory Game
 🖥️ [Memory Game Demo](https://memory-game-six-rouge.vercel.app/)
 
+[[/public/thumbnail.png|Memory Game Preview]]
 
 Created with
 <img height="16" width="16" src="https://cdn.simpleicons.org/React" />
@@ -9,8 +10,6 @@ Created with
 <img height="16" width="16" src="https://cdn.simpleicons.org/Vite" />
 
 
-
-A Just For Fun memory game
 
 
 ### Getting Started
@@ -31,7 +30,7 @@ npm run dev
 - [ ] Add a diffulty level
 - [ ] Add categories
 - [ ] Add Object.entries utility (Icons)
-- [ ] add custom classes to tailwind
+- [X] add custom classes to tailwind
 - [ ] Automate tailwind?
 - [ ] - [ ] Add a leaderboard
 	- [ ] Firebase backend

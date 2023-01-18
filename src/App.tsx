@@ -5,7 +5,6 @@ import Header from "./components/Header";
 import { CardData } from "./data/Data";
 import { shuffle } from "./utils/Shuffle";
 
-
 // assets
 import logo from "@/assets/logo.svg";
 
@@ -20,11 +19,10 @@ function App() {
           title="Memory Game"
         />
       </header>
-
-      <main className=" pt-5  max-w-7xl mx-auto my-0">
+      <main className="pt-5 max-w-7xl mx-auto my-0">
         <Game cards={shuffledCards} />
       </main>
-      <footer className="pt-5  max-w-7xl mx-auto my-0">
+      <footer className="max-w-7xl mx-auto my-0">
         <Footer />
       </footer>
     </div>

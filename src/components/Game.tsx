@@ -3,7 +3,7 @@ import { ICards, State } from "../Types/Types";
 
 import CardGrid from "./Cards";
 import Stats from "./Stats";
-import CompletedGame from "./Finished";
+import CompletedGame from "./Completed";
 
 
 export default function Game({ cards }: ICards) {
@@ -17,7 +17,6 @@ export default function Game({ cards }: ICards) {
   const totalPairs = cards.length / 2;
 
   useEffect(() => {
-
     if (state.flippedCards.length === 2) {
       setState({ ...state, disabled: true });
 
@@ -31,8 +30,6 @@ export default function Game({ cards }: ICards) {
             matchedCardIds: [...prevState.matchedCardIds, card1.cardId],
             flippedCards: [],
             disabled: false,
-
-
           }));
         } else {
           setState((prevState) => ({
@@ -49,22 +46,21 @@ export default function Game({ cards }: ICards) {
     }
   }, [state.flippedCards, cards]);
 
-  const handleCardClick = (index: number) => {
-    if (
-      state.disabled ||
-      state.flippedCards.includes(index) ||
-      state.matchedCardIds.includes(cards[index].cardId)
-    ) {
-      return;
-    }
-    setState((prevState) => ({
-      ...prevState,
-      flippedCards: [...prevState.flippedCards, index],
-    }));
-  };
+const handleCardClick = (index: number) => {
+  // ignore (return) Disabled cards & flipedCards & matched cards.
+  if (
+    state.disabled ||
+    state.flippedCards.includes(index) ||
+    state.matchedCardIds.includes(cards[index].cardId)
+  ) return;
+  setState((prevState) => ({
+    ...prevState,
+    flippedCards: [...prevState.flippedCards, index],
+  }));
+};
 
   return (
-    <div className="mx-auto px-4 text-center sm:px-6 lg:px-8">
+    <div className="mx-auto px-4 sm:px-6 lg:px-8">
 
       {state.gameOver ? (
         <CompletedGame
@@ -79,11 +75,14 @@ export default function Game({ cards }: ICards) {
           disabled={state.disabled}
         />
       )}
-            <Stats
-        numberOfGuesses={state.guesses}
-        totalPairs={totalPairs}
-        totalCorrect={state.matchedCardIds.length}
-      />
+      <>
+        <Stats
+          numberOfGuesses={state.guesses}
+          totalPairs={totalPairs}
+          totalCorrect={state.matchedCardIds.length}
+        />
+      </>
+
     </div>
   );
 }
