@@ -60,7 +60,7 @@ const handleCardClick = (index: number) => {
 };
 
   return (
-    <div className="mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="mx-auto">
 
       {state.gameOver ? (
         <CompletedGame

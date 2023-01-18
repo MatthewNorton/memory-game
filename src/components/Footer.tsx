@@ -2,7 +2,7 @@ import ResetButton from "./ResetButton";
 
 export default function Footer() {
   return(
-    <div className="block max-w-6xl px-12">
+    <div className="block">
         <div className="mb-3"><ResetButton/></div>
         <div>
           <p>

@@ -1,8 +1,8 @@
-import Card from "../components/Card";
 import { ICard } from "../Types/Types";
 
 
 const imgsrc = "cards/";
+
 export const CardData: ICard[] = [
   { cardId: "travel", imageUrl: `${imgsrc}travel.png` },
   { cardId: "boat", imageUrl: `${imgsrc}boat.png` },
