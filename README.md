@@ -1,7 +1,7 @@
 # Memory Game
 🖥️ [Memory Game Demo](https://memory-game-six-rouge.vercel.app/)
 
-[[/public/thumbnail.png|Memory Game Preview]]
+[![Memory Game Demo](public/thumbnail.png)](https://memory-game-six-rouge.vercel.app/)
 
 Created with
 <img height="16" width="16" src="https://cdn.simpleicons.org/React" />
