@@ -1,4 +1,4 @@
-import { IconProps} from "../Types/Types";
+import { IconProps} from "@/Types/Types";
 import reactIcon from "@/assets/reactIcon.svg";
 import typescriptIcon from "@/assets/typescriptIcon.svg";
 import tailwindIcon from "@/assets/tailwindIcon.svg";

@@ -1,5 +1,4 @@
-import React from "react";
-import Card from "./Card";
+import Card from "@/Components/Card";
 import { ICardContainerComponent } from "../Types/Types";
 
 export default function CardContainer({

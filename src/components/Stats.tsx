@@ -1,5 +1,4 @@
-import { IStats } from "../Types/Types";
-import ResetButton from "./ResetButton";
+import { IStats } from "@/Types/Types";
 export default function Stats({
   totalPairs,
   totalCorrect,

@@ -1,9 +1,9 @@
 // components
-import Footer from "./Components/Footer";
-import Game from "./Components/Game";
-import Header from "./Components/Header";
-import { CardData } from "./Data/Data";
-import { Shuffle } from "./Utils/Shuffle";
+import Footer from "@/Components/Footer";
+import Game from "@/Components/Game";
+import Header from "@/Components/Header";
+import { CardData } from "@/Data/Data";
+import { Shuffle } from "@/Utils/Shuffle";
 
 // assets
 import logo from "@/assets/logo.svg";

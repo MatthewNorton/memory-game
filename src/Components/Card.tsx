@@ -1,4 +1,4 @@
-import { ICardComponent } from "../Types/Types";
+import { ICardComponent } from "@/Types/Types";
 
 export default function Card({
   card,
