@@ -4,7 +4,7 @@ import Icons from "./Icons";
 export default function (props: HeaderProps) {
   const { logo, title} = props;
   return (
-    <>
+    <header className="bg-primary ">
       <div className="max-w-6xl mx-auto my-0 py-3 md:grid md:grid-cols-3 gap-4 items-center">
         <div className="flex col-span-2">
           <img src={logo} alt={title} className="w-[10rem] row-span-2" />
@@ -15,6 +15,6 @@ export default function (props: HeaderProps) {
           <Icons />
         </div>
       </div>
-    </>
+    </header>
   );
 }

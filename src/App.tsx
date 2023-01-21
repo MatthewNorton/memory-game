@@ -22,9 +22,7 @@ function App() {
       <main className="pt-5 max-w-6xl mx-auto my-0">
         <Game cards={shuffledCards} />
       </main>
-      <footer className="max-w-6xl mx-auto my-0">
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 }
