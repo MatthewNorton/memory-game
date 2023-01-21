@@ -1,5 +1,5 @@
 import { HeaderProps } from "@/Types/Types";
-import Icons from "@/Components/Icons";
+import Icons from "@/components/Icons";
 export default function (props: HeaderProps) {
   const { logo, title} = props;
   return (

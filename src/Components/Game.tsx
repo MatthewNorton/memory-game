@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { ICards, State } from "@/Types/Types";
 
-import CardGrid from "@/Components/Cards";
-import Stats from "@/Components/Stats";
-import CompletedGame from "@/Components/CompletedGame";
+import CardGrid from "@/components/Cards";
+import Stats from "@/components/Stats";
+import CompletedGame from "@/components/CompletedGame";
 
 
 export default function Game({ cards }: ICards) {

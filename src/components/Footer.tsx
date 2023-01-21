@@ -1,4 +1,4 @@
-import ResetButton from "@/Components/ResetButton";
+import ResetButton from "@/components/ResetButton";
 
 export default function Footer() {
   return(
