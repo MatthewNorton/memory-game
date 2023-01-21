@@ -1,5 +1,8 @@
 {
   "name": "memory-game",
+  "author": "Matt Norton",
+  "description": "Memory game created to try TailwindCSS",
+  "license": "MIT",
   "private": true,
   "version": "0.0.0",
   "type": "module",
