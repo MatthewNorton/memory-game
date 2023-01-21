@@ -3,7 +3,7 @@ import { ICards, State } from "../Types/Types";
 
 import CardGrid from "./Cards";
 import Stats from "./Stats";
-import CompletedGame from "./Completed";
+import CompletedGame from "./CompletedGame";
 
 
 export default function Game({ cards }: ICards) {

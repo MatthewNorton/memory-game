@@ -3,13 +3,13 @@ import Footer from "./Components/Footer";
 import Game from "./Components/Game";
 import Header from "./Components/Header";
 import { CardData } from "./Data/Data";
-import { shuffle } from "./Utils/Shuffle";
+import { Shuffle } from "./Utils/Shuffle";
 
 // assets
 import logo from "@/assets/logo.svg";
 
 function App() {
-  const shuffledCards = shuffle(CardData);
+  const shuffledCards = Shuffle(CardData);
 
   return (
     <div className="App">
