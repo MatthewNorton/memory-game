@@ -1,7 +1,7 @@
 // components
-import Footer from "@/components/Footer";
-import Game from "@/components/Game";
-import Header from "@/components/Header";
+import Footer from "@/Components/Footer";
+import Game from "@/Components/Game";
+import Header from "@/Components/Header";
 import { CardData } from "@/Data/Data";
 import { Shuffle } from "@/Utils/Shuffle";
 

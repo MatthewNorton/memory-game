@@ -1,4 +1,4 @@
-import Card from "@/components/Card";
+import Card from "@/Components/Card";
 import { ICardContainerComponent } from "../Types/Types";
 
 export default function CardContainer({
