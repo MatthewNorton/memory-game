@@ -1,5 +1,5 @@
 import Card from "@/Components/Card";
-import { ICardContainerComponent } from "../Types/Types";
+import { ICardContainerComponent } from "@/Types/Types";
 
 export default function CardContainer({
   cards,
