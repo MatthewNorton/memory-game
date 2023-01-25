@@ -15,7 +15,6 @@ export default function Game({ cards }: ICards) {
     gameOver: false,
   });
   const totalPairs = cards.length / 2;
-
   useEffect(() => {
     if (state.flippedCards.length === 2) {
       setState({ ...state, disabled: true });
@@ -46,27 +45,27 @@ export default function Game({ cards }: ICards) {
     }
   }, [state.flippedCards, cards]);
 
-const handleCardClick = (index: number) => {
-  // ignore (return) Disabled cards & flipedCards & matched cards.
-  if (
-    state.disabled ||
-    state.flippedCards.includes(index) ||
-    state.matchedCardIds.includes(cards[index].cardId)
-  ) return;
-  setState((prevState) => ({
-    ...prevState,
-    flippedCards: [...prevState.flippedCards, index],
-  }));
-};
+  const handleCardClick = (index: number) => {
+    // ignore (return) Disabled cards & flipedCards & matched cards.
+    if (
+      state.disabled ||
+      state.flippedCards.includes(index) ||
+      state.matchedCardIds.includes(cards[index].cardId)
+    ) return;
+    setState((prevState) => ({
+      ...prevState,
+      flippedCards: [...prevState.flippedCards, index],
+    }));
+  };
 
   return (
     <div className="mx-auto">
-
       {state.gameOver ? (
         <CompletedGame
           guesses={state.guesses}
         />
-      ) : (
+      ) : null }
+      {!state.gameOver ? (
         <CardGrid
           cards={cards}
           flippedCards={state.flippedCards}
@@ -74,7 +73,7 @@ const handleCardClick = (index: number) => {
           onClick={handleCardClick}
           disabled={state.disabled}
         />
-      )}
+      ) : null }
       <>
         <Stats
           numberOfGuesses={state.guesses}

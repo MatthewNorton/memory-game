@@ -6,7 +6,7 @@ export default function Stats({
 }: IStats) {
   return (
     <div>
-      <dl className="mt-5 mx-2 flex gap-5 sm:grid-cols-2 my-10">
+      <dl className="mt-5 mx-2 flex gap-5 sm:grid-cols-2 my-10 justify-center text-center">
         <div className="overflow-hidden  bg-neutral text-secondary px-4 py-5  border-gray-200 border rounded-md  sm:p-6">
           <dt className="truncate text-sm font-medium">
             Total Correct Pairs / Total Number of Pairs
